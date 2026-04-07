@@ -1,38 +1,87 @@
-# CLOVES-4603
-Official benchmark dataset and code for clove quality grading using classical texture features and fine-tuned deep models. CVPR 2026, Vision for Agriculture (V4A) Workshop.
+# CLOVES-4603: Benchmarking Classical Texture Features and Fine-Tuned Deep Models for Clove Quality Grading
 
-# Deep Learning for Automated Clove Quality Grading: A Feasibility Study
-
-[![AI4EAC 2026](https://img.shields.io/badge/AI4EAC-2026-orange)]()
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue)](https://cvpr.thecvf.com/)
+[![Workshop](https://img.shields.io/badge/Workshop-Vision%20for%20Agriculture%20V4A-green)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Authors:** Patrick Vincent Ndowo, Innocent Nyalala  
+**Authors:** Innocent Nyalala, Patrick Vincent Ndowo  
 **Affiliation:** SAAIL Lab, IIT Madras Zanzibar Campus, Tanzania  
-**Venue:** AI for East Africa Conference (AI4EAC 2026), Kigali, Rwanda
+**Venue:** 7th Workshop on Vision for Agriculture (V4A), CVPR 2026, Denver, USA
 
 ---
 
 ## Abstract
 
-We investigate the technical feasibility of automated clove quality grading using deep learning on ZSTC-Clove-V1, a novel dataset of 5,298 single-clove images across four official commercial grades collected at the Zanzibar State Trading Corporation. ResNet18 achieves 94.46% accuracy, while VGG16 fails to converge at 31.32%, demonstrating the architectural sensitivity of specialized agricultural datasets. The paper argues that accuracy alone is insufficient; interpretable and trustworthy AI is essential for responsible deployment in East African agriculture.
+We introduce CLOVES-4603, the first public benchmark dataset for automated clove quality grading, comprising 4,603 standardized 224×224 RGB images spanning four commercial grades collected at the Zanzibar State Trading Corporation (ZSTC). We benchmark classical texture pipelines (HOG+SVM, GLCM+GLRLM+LBP fusion) against fine-tuned deep learning models including ResNet-50, MobileNetV3, and a frozen DINOv2 vision transformer. ResNet-50 achieves 99.67% accuracy on the test set, while our texture-fusion SVM reaches 92.94%, providing a strong and deployment-friendly classical baseline. This benchmark is designed to inform real-world deployment trade-offs between accuracy, latency, and computational cost in agricultural settings where infrastructure is limited.
 
 ---
 
 ## Key Results
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|---|---|---|---|---|
-| ResNet18 | 94.46% | 94.39% | 94.34% | 94.33% |
-| VGG16 | 31.32% | 9.81% | 31.32% | 14.94% |
+| Model | Accuracy | Notes |
+|---|---|---|
+| ResNet-50 (fine-tuned) | 99.67% | Best overall |
+| MobileNetV3-Large (fine-tuned) | 99.35% | Lightweight option |
+| DINOv2 ViT-B/14 (frozen) | 94.90% | Zero-shot baseline |
+| GLCM+GLRLM+LBP SVM | 92.94% | Classical baseline |
+| HOG+SVM | 32.68% | Weak baseline |
 
 ---
 
 ## Dataset
 
-ZSTC-Clove-V1 contains 5,298 high-resolution single-clove images across four official ZSTC grades, collected at the Saateni warehouse, Unguja, Zanzibar.
+CLOVES-4603 contains 4,603 images across four official ZSTC commercial grades:
+
+| Grade | Description |
+|---|---|
+| Grade 1 | Attractive golden/saffron color, max 3% mpeta |
+| Grade 2 | Faded/slightly blackish, max 7% mpeta |
+| Grade 3 | More faded color, max 20% mpeta |
+| Grade 4 | Primarily mpeta cloves, >20% mpeta |
 
 > Dataset download link coming soon via Zenodo.
 
 ---
 
 ## Repository Structure
+
+```
+CLOVES-4603/
+├── data/                  # Dataset placeholder (see Zenodo link above)
+├── src/
+│   ├── classical/         # Texture feature pipelines
+│   ├── deep/              # Fine-tuning scripts
+│   └── evaluation/        # Metrics and visualization
+├── notebooks/             # Experiment notebooks
+├── requirements.txt
+└── README.md
+```
+
+## Setup
+
+```bash
+git clone https://github.com/saaillab/CLOVES-4603
+cd CLOVES-4603
+pip install -r requirements.txt
+```
+
+---
+
+## Citation
+
+```bibtex
+@inproceedings{nyalala2026cloves,
+  title={CLOVES-4603: Benchmarking Classical Texture Features and Fine-Tuned Deep Models for Clove Quality Grading},
+  author={Nyalala, Innocent and Ndowo, Patrick Vincent},
+  booktitle={7th Workshop on Vision for Agriculture (V4A), CVPR},
+  year={2026}
+}
+```
+
+---
+
+## About SAAIL Lab
+
+SAAIL Lab (Sustainable AI for Agriculture and Intelligent Livelihoods) is based at IIT Madras Zanzibar Campus, Tanzania. We build responsible, locally grounded AI solutions for East Africa and the Global South.
+
+🌍 [saaillab.github.io](https://saaillab.github.io)

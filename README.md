@@ -1,7 +1,7 @@
 # CLOVES-4603: Benchmarking Classical Texture Features and Fine-Tuned Deep Models for Clove Quality Grading
 
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue)](https://cvpr.thecvf.com/)
-[![Workshop](https://img.shields.io/badge/Workshop-Vision%20for%20Agriculture%20V4A-green)]()
+[![Workshop](https://img.shields.io/badge/Workshop-Vision%20for%20Agriculture%20V4A-green)](https://www.agriculture-vision.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Authors:** Innocent Nyalala, Patrick Vincent Ndowo  

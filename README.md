@@ -1,3 +1,5 @@
+[![Project Page](https://img.shields.io/badge/Project%20Page-Live-2563eb)](https://saaillab.github.io/CLOVES-4603/) [![SAAIL Lab](https://img.shields.io/badge/SAAIL%20Lab-CVPR%202026%20V4A-0f172a)](https://saaillab.github.io/papers/cloves-4603/)
+
 # CLOVES-4603: Benchmarking Classical Texture Features and Fine-Tuned Deep Models for Clove Quality Grading
 
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue)](https://cvpr.thecvf.com/)

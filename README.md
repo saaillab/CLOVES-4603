@@ -5,7 +5,7 @@
 [![Project Page](https://img.shields.io/badge/Project%20Page-Live-14532d)](https://saaillab.github.io/CLOVES-4603/)
 [![SAAIL Lab Summary](https://img.shields.io/badge/SAAIL%20Lab-CVPR%202026%20V4A-0f172a)](https://saaillab.github.io/papers/cloves-4603/)
 [![OpenReview PDF](https://img.shields.io/badge/OpenReview-PDF-b45309)](https://openreview.net/pdf?id=V1UbAtXS4M)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-14532d.svg)](LICENSE)
 
 **Authors:** Innocent Nyalala, Patrick Vincent Ndowo  
 **Affiliation:** SAAIL Lab, School of Engineering and Science, Indian Institute of Technology Madras Zanzibar, Tanzania  
@@ -86,6 +86,11 @@ CLOVES-4603/
 ├── README.md
 ├── LICENSE
 ├── CITATION.cff
+├── session_confounding_probes/                # Causal session-confound validation suite
+│   ├── session_tests.py
+│   ├── confound_check.py
+│   ├── clove_validation.py
+│   └── mechanism_check.py
 └── docs/
     ├── index.html                                 # Standalone CVPR 2026 project page
     └── assets/
@@ -109,4 +114,14 @@ CLOVES-4603/
 }
 ```
 
-Maintained by **[SAAIL Lab](https://saaillab.github.io/)**, School of Engineering and Science, Indian Institute of Technology Madras Zanzibar, Tanzania.
+---
+
+## License, Attribution & Commercial Restriction
+
+All code, benchmark documentation, splits, and research artifacts in this repository are licensed strictly under **Creative Commons Attribution-NonCommercial 4.0 International ([CC BY-NC 4.0](LICENSE))** by **Innocent Nyalala & SAAIL Lab (Indian Institute of Technology Madras Zanzibar)**.
+
+- **Non-Commercial Scientific Use Only:** Materials may be studied, cited, and adapted strictly for non-commercial academic research and educational replication.
+- **Mandatory Attribution:** Any use or derivative study must explicitly acknowledge **Innocent Nyalala** ([IITMZ Profile](https://www.iitmz.ac.in/schools/engineering-and-science/faculty/prof-innocent-nyalala)) and **[SAAIL Lab](https://saaillab.github.io/)** and cite the accompanying publication above.
+- **Prohibition on Unauthorized Commercialization:** Commercial deployment, paid hosting, proprietary licensing, or product commercialization is strictly prohibited without prior written authorization and direct inclusion of **Innocent Nyalala (`innocent@iitmz.ac.in`)**.
+
+Maintained by **[SAAIL Lab](https://saaillab.github.io/)** ([IITMZ Labs](https://www.iitmz.ac.in/labs)) · School of Engineering and Science, **[Indian Institute of Technology Madras Zanzibar](https://www.iitmz.ac.in/)** · PI: **[Innocent Nyalala](https://www.iitmz.ac.in/schools/engineering-and-science/faculty/prof-innocent-nyalala)**.

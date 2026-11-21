@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 title: "CLOVES-4603: Benchmarking Classical Texture Features and Fine-Tuned Deep Models for Clove Quality Grading"
+message: "If you use this benchmark or evaluation protocol, please cite our work."
 type: software
 authors:
   - family-names: Nyalala
     given-names: Innocent
     orcid: "https://orcid.org/0000-0002-7969-437X"
-  - family-names: Vincent
-    given-names: Patrick N.
+  - family-names: Ndowo
+    given-names: Patrick Vincent
 repository-code: "https://github.com/saaillab/CLOVES-4603"
 url: "https://saaillab.github.io/CLOVES-4603/"
 license: MIT

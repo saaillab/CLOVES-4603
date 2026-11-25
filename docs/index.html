@@ -65,7 +65,7 @@ ER  - </pre> </div> </section> </main> <div id="paperLiveStatus" class="sr-only"
 This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Nerfies</a> project page.
           You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br data-astro-cid-jm7tem27>
 This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-</p> </div> </div> </footer> <!-- Full-Resolution Figure Lightbox --> <div id="imgLightbox" class="img-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged figure preview" data-astro-cid-jm7tem27> <button id="closeLightbox" type="button" class="lightbox-close" aria-label="Close enlarged view" data-astro-cid-jm7tem27>&times;</button> <img id="lightboxImg" alt="" data-astro-cid-jm7tem27> </div> <script>
+</p> </div> </div> </footer> <!-- Full-Resolution Figure Lightbox --> <div id="imgLightbox" class="img-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged figure preview" data-astro-cid-jm7tem27> <button id="closeLightbox" type="button" class="lightbox-close" aria-label="Close enlarged view" data-astro-cid-jm7tem27>&times;</button> <img id="lightboxImg" alt="Enlarged figure preview" data-astro-cid-jm7tem27> </div> <script>
     (function () {
       const btn = document.getElementById('moreWorksBtn');
       const dropdown = document.getElementById('moreWorksDropdown');
@@ -240,6 +240,12 @@ This website is licensed under a <a rel="license" href="http://creativecommons.o
           document.body.removeChild(link);
           setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
           announcePaper('Downloaded ' + slug + '.bib.');
+        });
+      }
+
+      if ('serviceWorker' in navigator && location.pathname.indexOf('/papers/') === 0) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
         });
       }
     })();
